@@ -22,11 +22,12 @@ first_input_prompt = PromptTemplate(
 
 # HuggingFaceHub LLMs
 llm = HuggingFaceEndpoint(
-    model_kwargs={
-    "temperature": 0.5,
-    "max_length": 64},
-    repo_id = "google/flan-t5-xxl"
+    repo_id = "google/flan-t5-xxl",
+    temperature = 0.5,
+    max_length = 64,
+    huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN
 )
+
 
 chain = LLMChain(
     llm=llm,
