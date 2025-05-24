@@ -24,7 +24,7 @@ first_input_prompt = PromptTemplate(
 llm = HuggingFaceEndpoint(
     repo_id = "google/flan-t5-xxl",
     temperature = 0.5,
-    max_length = 64
+    max_length = 654
 )
 
 
